@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="setup-section">
+            <h1>Countdown Timer</h1>
+            <div class="input-group">
+                <label for="title">Title (editable later):</label>
+                <input type="text" id="title" placeholder="Enter a title or description">
+            </div>
+            <div class="input-group">
+                <label for="hours">Hours:</label>
+                <input type="number" id="hours" min="0" max="99" value="0">
+                
+                <label for="minutes">Minutes:</label>
+                <input type="number" id="minutes" min="0" max="59" value="5">
+                
+                <label for="seconds">Seconds:</label>
+                <input type="number" id="seconds" min="0" max="59" value="0">
+            </div>
+            <button id="start-btn">Start Timer</button>
+        </div>
+        
+        <div class="timer-section hidden">
+            <h2 id="timer-title" contenteditable="true"></h2>
+            <div class="timer-display">
+                <span id="hours-display">00</span>:<span id="minutes-display">05</span>:<span id="seconds-display">00</span>
+            </div>
+            <div class="timer-controls">
+                <button id="pause-btn">Pause</button>
+                <button id="reset-btn">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
